@@ -39,6 +39,7 @@ class BarTab:
 
         with path.open('w', newline="") as file:
             writer = csv.writer(file)
+            writer.writerow(["Table number:", self.table_number])
             writer.writerow(["Drinks name", "Cost"])
             writer.writerows(self.drinks)
             writer.writerow(['Total', self.total])
